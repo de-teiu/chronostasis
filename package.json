@@ -16,6 +16,7 @@
     "bignumber.js": "^9.0.0",
     "cssnano": "^4.1.10",
     "jquery": "^3.4.1",
+    "parcel-bundler": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.2.1",
     "sanitize.css": "^11.0.0"
   },
