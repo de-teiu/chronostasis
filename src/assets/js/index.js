@@ -79,7 +79,7 @@ const recalculate = (dayDuration) => {
     //const now = new Date("2019/01/01 23:59:00");
     const minutes = BigNumber(now.getHours()).times(60).plus(now.getMinutes());
     
-    const isInExtraTime = minutes.div(dayDuration.hourDuration) >= dayDuration.hour;
+    const isInExtraTime = minutes.div(dayDuration.hourDuration).toNumber() > dayDuration.hour;
     if(isInExtraTime){
         const convertedHours = dayDuration.hour;
         const convertedMinutes = BigNumber(minutes).minus(dayDuration.hourDuration.times(dayDuration.hour));
