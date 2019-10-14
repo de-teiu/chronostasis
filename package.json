@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./src/index.html",
+    "dev": "parcel ./src/index.html -d dev",
+    "build": "parcel build ./src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,7 +14,9 @@
   "dependencies": {
     "bignumber": "^1.1.0",
     "bignumber.js": "^9.0.0",
+    "cssnano": "^4.1.10",
     "jquery": "^3.4.1",
+    "parcel-plugin-static-files-copy": "^2.2.1",
     "sanitize.css": "^11.0.0"
   },
   "devDependencies": {
