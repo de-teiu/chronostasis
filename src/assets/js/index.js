@@ -76,24 +76,28 @@ const recalculate = (dayDuration) => {
     
     //現在時刻を取得(分)
     const now = new Date();
-    //const now = new Date("2019/01/01 00:00:00");
+    //const now = new Date("2019/01/01 23:59:00");
     const minutes = BigNumber(now.getHours()).times(60).plus(now.getMinutes());
     
-    //算出した1時間の長さと延長時間から、変換後の現在時刻を算出
-    const convertedHours = minutes.div(dayDuration.hourDuration).integerValue(BigNumber.ROUND_DOWN);
-    const convertedMinutes = minutes.modulo(dayDuration.hourDuration);
-    const seconds = now.getSeconds();
-    //画面表示を更新
-    $("#txt-hours").text(convertedHours);
-    $("#txt-minutes").text(convertedMinutes);
-    $("#txt-seconds").text(seconds);
-    
-    //延長時間表示を更新
     const isInExtraTime = minutes.div(dayDuration.hourDuration) >= dayDuration.hour;
-    setVisibility($("#txt-extra-title"), isInExtraTime );
     if(isInExtraTime){
+        const convertedHours = dayDuration.hour;
+        const convertedMinutes = BigNumber(minutes).minus(dayDuration.hourDuration.times(dayDuration.hour));
+        const seconds = now.getSeconds();
+        //画面表示を更新
+        $("#txt-hours").text(convertedHours);
+        $("#txt-minutes").text(convertedMinutes);
+        $("#txt-seconds").text(seconds);
         $("#block-current").addClass("in-extra");
-    }else{
+    } else {
+        //算出した1時間の長さと延長時間から、変換後の現在時刻を算出
+        const convertedHours = minutes.div(dayDuration.hourDuration).integerValue(BigNumber.ROUND_DOWN);
+        const convertedMinutes = minutes.modulo(dayDuration.hourDuration);
+        const seconds = now.getSeconds();
+        //画面表示を更新
+        $("#txt-hours").text(convertedHours);
+        $("#txt-minutes").text(convertedMinutes);
+        $("#txt-seconds").text(seconds);
         $("#block-current").removeClass("in-extra");
     }
 };
