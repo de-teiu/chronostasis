@@ -3,6 +3,9 @@ $header_background_color: blue;
 $footer_height: 24px;
 $footer_background_color:darkcyan;
 
+html, body {
+    height: 100%;
+}
 
 body {
     font-family: 'Press Start 2P', cursive;
@@ -11,7 +14,6 @@ body {
 
     display: flex;
     flex-flow: column;
-    min-height: 100vh;
 }
 
 header {
