@@ -1,0 +1,114 @@
+$header_height: 48px;
+$header_background_color: blue;
+$footer_height: 24px;
+$footer_background_color:darkcyan;
+
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: black;
+    color:white;
+
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color:$header_background_color;
+    height: $header_height;
+    line-height: $header_height + 5px;
+    text-align: center;
+    font-size:1.2em;
+
+    box-shadow: 0px 3px 3px $header_background_color;
+}
+
+.error {
+    background-color: red;
+    font-size:0.8em;
+    visibility: hidden;
+}
+
+main {
+    flex:1;
+    text-align: center;
+}
+
+button, input {
+    font-family: inherit;
+    font-size: 100%
+}
+
+.clock {
+    & .title {
+        margin-bottom: 0px;
+    }
+
+    & .extra {
+        margin: 0px;
+        font-size: 0.7em;
+        color: red;
+        visibility: hidden;
+    }
+
+    & .current {
+        margin-top: 10px;
+        font-size: 1.5em;
+        letter-spacing: -0.8em;
+        & span {
+            letter-spacing: normal;
+        }
+    }
+
+    & .in-extra {
+        color:aqua;
+    }
+
+    & .remarks {
+        margin-bottom: 0px;
+        font-size: 0.8em;
+        
+    }
+}
+
+#txt-unit {
+    color:red;
+}
+
+#inp-daylength {
+    width: 120px;
+    text-align: center;
+    padding:5px;
+    margin-right: 5px;
+}
+
+#btn-update {
+    background-color: white;
+    border:none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0px 3px 3px gray;
+    &:active {
+        position: relative;
+        top:3px;
+        box-shadow: none;
+    }
+}
+
+footer {
+    height: $footer_height;
+    line-height: $footer_height;
+    text-align: center;
+    background-color: $footer_background_color;
+
+    box-shadow: 0px -3px 3px $footer_background_color;
+
+    & a {
+        color: gold;
+        text-decoration: none;
+        &:hover {
+            color: white;
+        }
+    }
+}

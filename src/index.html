@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chronostasis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="DE-TEIU">
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@de_teiu_tkg" />
+    <meta name="twitter:title" content="Chronostasis" />
+    <meta name="twitter:description" content="Change the length of a day." />
+    <meta name="twitter:image" content="" />
+    
+    <link rel="shortcut icon" href="./assets/image/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <span>Chronostasis</span>
+    </header>
+    <div id="block-error" class="error">Error:Incorrect Number.</div>
+    <main>
+        <section class="clock">
+            <p class="title">Current time</p>
+            <p class="extra" id="txt-extra-title">(In Extra time)</p>
+            <p id="block-current" class="current">
+                <span id="txt-hours">0</span>
+                <span>:</span>
+                <span id="txt-minutes">0</span>
+                <span>:</span>
+                <span id="txt-seconds">0</span>
+            </p>
+            <p class="remarks">(1 hour: <span id="txt-unit"></span> minutes)</p>
+            <p class="extra" id="txt-extra-remarks">(Extra time:<span id="txt-extra"></span> minutes)</p>
+        </section>
+        <hr>
+        <section class="settings">
+            <p>Please set the length of a day.</p>
+            <p>( 1~1440 hours )</p>
+            <input type="number" id="inp-daylength"><span>hours</span>
+            <p><button id="btn-update">UPDATE</button></p>
+        </section>
+    </main>
+    <footer>
+        <span>&copy; <a href="https://uselesscode.net/" target="_blank">Uselesscode</a></span>
+    </footer>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
