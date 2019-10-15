@@ -110,3 +110,6 @@ const recalculate = (dayDuration) => {
 const setVisibility = (obj,visibility) => {
     obj.css("visibility",(visibility) ? "visible" : "hidden");
 };
+
+const swName = "/service-worker.js";
+navigator.serviceWorker.register(swName);
