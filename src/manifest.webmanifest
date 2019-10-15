@@ -1,7 +1,8 @@
 {
     "name": "Chronostasis",
     "short_name": "Chronostasis",
-    "start_url": ".",
+    "start_url": "/",
+    "Scope": "/",
     "display": "standalone",
     "background_color": "#fff",
     "description": "Change the length of a day.",
