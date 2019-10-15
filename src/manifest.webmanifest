@@ -2,9 +2,10 @@
     "name": "Chronostasis",
     "short_name": "Chronostasis",
     "start_url": "/",
-    "Scope": "/",
     "display": "standalone",
-    "background_color": "#fff",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "lang": "ja",
     "description": "Change the length of a day.",
     "icons": [
         {
