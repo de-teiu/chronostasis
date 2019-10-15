@@ -21,6 +21,7 @@
     "sanitize.css": "^11.0.0"
   },
   "devDependencies": {
+    "parcel-plugin-sw-precache": "^1.1.1",
     "sass": "^1.23.0"
   }
 }
